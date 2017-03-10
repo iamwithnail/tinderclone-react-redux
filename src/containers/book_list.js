@@ -4,6 +4,8 @@
 
 import React, {Component } from 'react';
 import { connect } from 'react-redux';
+//container is a regular react component that gets bonded to the application state, and we connect the two.
+//whever container data changes, will re-render.
 
 
 class BookList extends Component {
@@ -29,4 +31,5 @@ function mapStateToProps(state) {
   return {  books: state.books };
 }
 
+//this connects up the global redux state
 export default connect(mapStateToProps)(BookList);
